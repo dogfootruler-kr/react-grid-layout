@@ -730,7 +730,8 @@ export default class ReactGridLayout extends React.Component<Props, State> {
     const itemCenterOffsetY = (finalDroppingItem.h / 2) * gridCellHeight;
 
     // Calculate mouse position relative to grid, accounting for drag offset and item centering
-    const rawGridX = e.clientX - gridRect.left + dragOffsetX - itemCenterOffsetX;
+    const rawGridX =
+      e.clientX - gridRect.left + dragOffsetX - itemCenterOffsetX;
     const rawGridY = e.clientY - gridRect.top - itemCenterOffsetY;
 
     // Clamp to grid bounds and round to nearest pixel
